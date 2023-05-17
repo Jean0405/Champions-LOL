@@ -6,7 +6,7 @@
 }
 
 html{
-    font-family: "Beaufort for LOL", serif;
+    font-family: "Beaufort for LOL",serif;
 }
 
 nav{
@@ -62,15 +62,38 @@ nav a img{
     display: flex;
     margin: 0 auto;
     border: 0.1px solid rgb(169, 169, 169);
-    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 .characters-container .dropdown{
     height: 3rem;
     padding: 0 3rem;
 }
+
 .characters-container .search{
+    position: relative;
     width: 30%; 
+}
+.characters-container .search::after{
+    position: absolute;
+    content: '';
+    width: 0.5px;
+    height: 25px;
+    right: 0;
+    top: calc(50% - 12.5px);
+    background-color: rgba(128, 128, 128, 0.579);
+}
+.characters-container .search input{
+    outline: none;
+}
+.characters-container .search .btnSearch{
+    border: 0;
+    border-radius: 0;
+    color: rgb(200, 155, 60);
+}
+.characters-container .search .btnSearch:hover{
+    background-color: rgb(200, 155, 60);
+    color: white;
 }
 .characters-container .buttons{
     width: 80%;
@@ -107,6 +130,7 @@ nav a img{
     color: #000000;
     border-bottom: 3px solid rgb(200, 155, 60);
 }
+
 
 @media (max-width: 700px) {
     .characters-container .search{
