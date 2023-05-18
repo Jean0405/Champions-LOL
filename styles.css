@@ -2,8 +2,183 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
+
+.header-title{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+}
+.header-title span{
+    font-size: 1.5rem;
+}
+.header-title h1{
+    font-weight: 900;
+    font-size: 4.5rem;
+}
+.header-text{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+.header-text p{
+    text-align: center;
+    max-width: 460px;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    padding: 1rem 0;
+    color: #636363;
+    font-family: Spiegel, "Arial Narrow", Arial, sans-serif;
+}
+
+/* characters-container */
+.characters-container{
+    width: 98%;
+    display: flex;
+    margin: 0 auto;
+    border: 0.1px solid rgb(169, 169, 169);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.characters-container .dropdown{
+    height: 3rem;
+    padding: 0 3rem;
+}
+
+.characters-container .search{
+    position: relative;
+    width: 30%; 
+}
+.characters-container .search::after{
+    position: absolute;
+    content: '';
+    width: 0.5px;
+    height: 25px;
+    right: 0;
+    top: calc(50% - 12.5px);
+    background-color: rgba(128, 128, 128, 0.579);
+}
+.characters-container .search input{
+    outline: none;
+}
+.characters-container .search .btnSearch{
+    border: 0;
+    border-radius: 0;
+    color: rgb(200, 155, 60);
+}
+.characters-container .search .btnSearch:hover{
+    background-color: rgb(200, 155, 60);
+    color: white;
+}
+.characters-container .buttons{
+    width: 80%;
+}
+
+/* list roles */
+
+.list-roles{
+    width: 100%;
+    height: 3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.list-roles li{
+    margin: 0 0.5rem;
+}
+.list-roles li button{
+    position: relative;
+    height: 3rem;
+    padding: 0.2rem;
+    border: none;
+    color: rgb(185, 185, 185);
+    font-size: 0.78rem;
+    font-weight: 500;
+    font-family: Spiegel, "Arial Narrow", Arial, sans-serif;
+    background-color: transparent;
+    transition: 0.2s ease-out;
+}
+.list-roles li button:hover{
+    color: #000000;
+    border-bottom: 3px solid rgb(200, 155, 60);
+}
+
+
+/* CHAMPIONS CARDS */
+.champions_card-container{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(168px, 168px));
+    grid-template-rows: auto;
+    margin-top: 2rem;
+    gap: 8px;
+}
+.champions_card-container .card-champion{
+    width: 100%;
+    height: 16.8rem;
+}
+.champions_card-container .card-champion .title-champion{
+    position: absolute;
+    bottom: 0;
+    width: 168px;
+    padding: 1rem;
+    font-family: 'Beautfor for LOL', serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(10, 20, 40);
+}
+.champions_card-container .card-champion:hover .title-champion span{
+    transition: 0.5s;
+    padding-left: 1rem;
+}
+
+.icons-download img{
+    display: flex;
+    justify-content: center;
+    width: 5.5rem;
+}
+.links-lol{
+    background-color: rgb(46, 46, 46);
+}
+.links-lol a{
+    color: white;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+.links-lol a:hover{
+    background-color: rgb(85, 85, 85);
+    color: white;
+}
+@media (max-width: 800px){
+    .links-lol{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 700px) {
+    .characters-container .search{
+        width: 100%;
+    }
+    .characters-container .buttons{
+        width: 100%;
+    }
+    .characters-container{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+@media (max-width: 300px) {
+    .header-title h1{
+        font-weight: 900;
+        font-size: 3rem;
+    }
+  }}
 
 html{
     font: 62.5%;
@@ -144,7 +319,6 @@ nav a img{
 .champions_card-container .card-champion{
     width: 100%;
     height: 16.8rem;
-    background-color: red;
 }
 .champions_card-container .card-champion .title-champion{
     position: absolute;
@@ -162,7 +336,29 @@ nav a img{
     padding-left: 1rem;
 }
 
-
+.icons-download img{
+    display: flex;
+    justify-content: center;
+    width: 5.5rem;
+}
+.links-lol{
+    background-color: rgb(46, 46, 46);
+}
+.links-lol a{
+    color: white;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+.links-lol a:hover{
+    background-color: rgb(85, 85, 85);
+    color: white;
+}
+@media (max-width: 800px){
+    .links-lol{
+        flex-direction: column;
+        align-items: center;
+    }
+}
 @media (max-width: 700px) {
     .characters-container .search{
         width: 100%;
